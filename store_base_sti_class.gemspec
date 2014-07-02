@@ -117,6 +117,7 @@ Gem::Specification.new do |s|
     "lib/store_base_sti_class_for_3_1_and_above.rb",
     "lib/store_base_sti_class_for_4_0.rb",
     "lib/store_base_sti_class_for_4_1.rb",
+    "lib/store_base_sti_class_for_4_1_2.rb",
     "store_base_sti_class.gemspec",
     "test/connection.rb",
     "test/helper.rb",
