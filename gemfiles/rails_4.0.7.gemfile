@@ -7,4 +7,4 @@ gem "appraisal", :group => :development
 gem "jeweler", :group => :development
 gem "bundler", :group => :development
 gem "minitest", "~> 4.0"
-gem "activerecord", "3.1.2"
+gem "activerecord", "4.0.7"

@@ -128,7 +128,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.23"
-  s.summary = "Modifies ActiveRecord 3.0.5 - 4.1.0 with the ability to store the actual class (instead of the base class) in polymorhic _type columns when using STI"
+  s.summary = "Modifies ActiveRecord 3.0.5 - 4.1.4 with the ability to store the actual class (instead of the base class) in polymorhic _type columns when using STI"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
