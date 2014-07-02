@@ -5,9 +5,8 @@
 
 Gem::Specification.new do |s|
   s.name = "store_base_sti_class"
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
-  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andrew Mutz"]
   s.date = "2013-11-28"
   s.description = "\n    ActiveRecord has always stored the base class in polymorphic _type columns when using STI. This can have non-trivial\n    performance implications in certain cases. This gem adds 'store_base_sti_class' configuration options which controls\n    whether ActiveRecord will store the base class or the actual class. Default to true for backwards compatibility.\n  "
@@ -18,7 +17,6 @@ Gem::Specification.new do |s|
   ]
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
 
   s.homepage = "http://github.com/appfolio/store_base_sti_class"
   s.licenses = ["MIT"]
@@ -26,25 +24,14 @@ Gem::Specification.new do |s|
   s.rubygems_version = "1.8.23"
   s.summary = "Modifies ActiveRecord 3.0.5 - 4.1.4 with the ability to store the actual class (instead of the base class) in polymorhic _type columns when using STI"
 
-  if s.respond_to? :specification_version then
-    s.specification_version = 3
-
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<activerecord>, [">= 0"])
-      s.add_development_dependency(%q<sqlite3>, [">= 0"])
-      s.add_development_dependency(%q<appraisal>, [">= 0"])
-      s.add_development_dependency(%q<bundler>, [">= 0"])
-    else
-      s.add_dependency(%q<activerecord>, [">= 0"])
-      s.add_dependency(%q<sqlite3>, [">= 0"])
-      s.add_dependency(%q<appraisal>, [">= 0"])
-      s.add_dependency(%q<bundler>, [">= 0"])
-    end
-  else
-    s.add_dependency(%q<activerecord>, [">= 0"])
-    s.add_dependency(%q<sqlite3>, [">= 0"])
-    s.add_dependency(%q<appraisal>, [">= 0"])
-    s.add_dependency(%q<bundler>, [">= 0"])
+  s.add_dependency 'activerecord'
+  if s.respond_to? :add_develoment_dependency
+    s.add_development_dependency 'sqlite3'
+    s.add_development_dependency 'appraisal'
+  else 
+    s.add_dependency 'sqlite3'
+    s.add_dependency 'appraisal'
   end
+  s.add_dependency 'bundler'
 end
 
