@@ -1,4 +1,4 @@
-require 'active_record/associations/join_dependency'
+require 'active_record/associations/join_dependency/join_part'
 
 if Gem::Requirement.new('~> 4.1.2').satisfied_by? Gem.loaded_specs["activerecord"].version
   module ActiveRecord
